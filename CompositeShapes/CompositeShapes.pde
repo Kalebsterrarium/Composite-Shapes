@@ -6,7 +6,7 @@ float CircleX, CircleY, CircleDiameter;
 float circleA, circleB, Circlediameter;
 float CircleA, CircleB, circlediameter;
 float circleC, circleD, CircleDiameterCD;
-
+color blue=#333CD3, colourFill, black=#000000, ColourFill;
 //
 //Geometery
 fullScreen();
@@ -31,11 +31,15 @@ circlediameter = displayHeight*1/8;
 circleC = displayWidth*1/3; 
 circleD = displayHeight*1/3;
 CircleDiameterCD = displayHeight*1/8;
+colourFill= blue;
+ColourFill=black;
 //
 //Canvas
 rect(rectX, rectY, rectWidth, rectHeight);
 ellipse(circleX, circleY, circleDiameter, circleDiameter);
+fill(colourFill);
 ellipse(CircleX, CircleY, CircleDiameter, CircleDiameter);
 ellipse(circleA, circleB, Circlediameter, Circlediameter);
+fill(ColourFill);
 ellipse(CircleA, CircleB, circlediameter, circlediameter);
 ellipse( circleC, circleD, CircleDiameterCD, CircleDiameterCD);
