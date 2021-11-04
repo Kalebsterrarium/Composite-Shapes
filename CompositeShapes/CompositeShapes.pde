@@ -7,10 +7,13 @@ float circleA, circleB, Circlediameter;
 float CircleA, CircleB, circlediameter;
 float circleC, circleD, CircleDiameterCD;
 color blue=#333CD3, colourFill, black=#000000, ColourFill;
+PImage pic1;
+float picX1, picY1, picWidth1, picHeight1, pic1ImageWidthRatio, pic1ImageHeightRatio;
 //
 //Geometery
 fullScreen();
 //
+pic1 = loadImage();
 //Population
 rectX = displayWidth*1/2 - displayHeight*1/2;
 rectY = displayHeight*0; 
@@ -33,9 +36,17 @@ circleD = displayHeight*1/3;
 CircleDiameterCD = displayHeight*1/8;
 colourFill= blue;
 ColourFill=black;
+ pic1ImageHeightRatio=;
+ pic1ImageWidthRatio=;
+ 
+ picX1 = rectX;
+ picY1 = rectY; 
+ picWidth1 =rectWidth*pic1ImageWidthRatio ; 
+ picHeight1 =rectHeight*pic1ImageHeightRatio  ;
 //
 //Canvas
 rect(rectX, rectY, rectWidth, rectHeight);
+image(pic1, picX1, picY1, picWidth1, picHeight1);
 ellipse(circleX, circleY, circleDiameter, circleDiameter);
 fill(colourFill);
 ellipse(CircleX, CircleY, CircleDiameter, CircleDiameter);
