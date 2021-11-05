@@ -45,18 +45,18 @@ ColourFill=black;
  picY1 = displayHeight*5/8; 
  picWidth1 =displayWidth*pic1ImageWidthRatio*1/3 ; 
  picHeight1 =displayHeight*pic1ImageHeightRatio*1/3  ;
- //noseX1=; 
- //noseY1=; 
- //noseX2=; 
- //noseY2=; 
- //noseX3=; 
- //noseY3=;
+ noseX1=faceX; 
+ noseY1=displayHeight*3/8; 
+ noseX2=lefteyeX; 
+ noseY2=faceY; 
+ noseX3=displayWidth*6/8; 
+ noseY3=faceY;
 //
 //Canvas
 
 rect(rectX, rectY, rectWidth, rectHeight);
 ellipse(faceX, faceY, faceDiameter, faceDiameter);
-//image(pic1, picX1, picY1, picWidth1, picHeight1);
+image(pic1, picX1, picY1, picWidth1, picHeight1);
 
 fill(colourFill);
 ellipse(lefteyeX, lefteyeY, lefteyeDiameter, lefteyeDiameter);
@@ -64,5 +64,5 @@ ellipse(circleA, circleB, Circlediameter, Circlediameter);
 fill(ColourFill);
 ellipse(righteyeA, righteyeB, righteyediameter, righteyediameter);
 ellipse( circleC, circleD, CircleDiameterCD, CircleDiameterCD);
-//triangle(noseX1, noseY1, noseX2, noseY2, noseX3, noseY3);
+triangle(noseX1, noseY1, noseX2, noseY2, noseX3, noseY3);
 //line(mouthX1, mouthY1, mouthX2, mouthY2);
