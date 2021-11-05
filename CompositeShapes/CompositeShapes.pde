@@ -1,14 +1,16 @@
 //Measles
 //
 float rectX, rectY, rectWidth, rectHeight;
-float circleX, circleY, circleDiameter;
-float CircleX, CircleY, CircleDiameter;
+float faceX, faceY, faceDiameter;
+float lefteyeX, lefteyeY, lefteyeDiameter;
 float circleA, circleB, Circlediameter;
-float CircleA, CircleB, circlediameter;
+float righteyeA, righteyeB, righteyediameter;
 float circleC, circleD, CircleDiameterCD;
 color blue=#333CD3, colourFill, black=#000000, ColourFill;
 PImage pic1;
 float picX1, picY1, picWidth1, picHeight1, pic1ImageWidthRatio, pic1ImageHeightRatio;
+float noseX1, noseY1, noseX2, noseY2, noseX3, noseY3;
+float mouthX1, mouthY1, mouthX2, mouthY2;
 //
 //Geometery
 fullScreen();
@@ -19,18 +21,18 @@ rectX = displayWidth*1/2 - displayHeight*1/2;
 rectY = displayHeight*0; 
 rectWidth = displayHeight;
 rectHeight = displayHeight;
-circleX = displayWidth*1/2; 
-circleY = displayHeight*1/2;
-circleDiameter = displayHeight; //smallest dimension
-CircleX = displayWidth*1/3; 
-CircleY = displayHeight*1/3;
-CircleDiameter = displayHeight*1/4; //smallest dimension
+faceX = displayWidth*1/2; 
+faceY = displayHeight*1/2;
+faceDiameter = displayHeight; //smallest dimension
+lefteyeX = displayWidth*1/3; 
+lefteyeY = displayHeight*1/3;
+lefteyeDiameter = displayHeight*1/4; //smallest dimension
 circleA = displayWidth*2/3; 
 circleB = displayHeight*1/3;
 Circlediameter = displayHeight*1/4; //smallest dimension
-CircleA = displayWidth*2/3; 
-CircleB = displayHeight*1/3;
-circlediameter = displayHeight*1/8;
+righteyeA = displayWidth*2/3; 
+righteyeB = displayHeight*1/3;
+righteyediameter = displayHeight*1/8;
 circleC = displayWidth*1/3; 
 circleD = displayHeight*1/3;
 CircleDiameterCD = displayHeight*1/8;
@@ -43,16 +45,24 @@ ColourFill=black;
  picY1 = displayHeight*5/8; 
  picWidth1 =displayWidth*pic1ImageWidthRatio*1/3 ; 
  picHeight1 =displayHeight*pic1ImageHeightRatio*1/3  ;
+ //noseX1=; 
+ //noseY1=; 
+ //noseX2=; 
+ //noseY2=; 
+ //noseX3=; 
+ //noseY3=;
 //
 //Canvas
 
 rect(rectX, rectY, rectWidth, rectHeight);
-ellipse(circleX, circleY, circleDiameter, circleDiameter);
-image(pic1, picX1, picY1, picWidth1, picHeight1);
+ellipse(faceX, faceY, faceDiameter, faceDiameter);
+//image(pic1, picX1, picY1, picWidth1, picHeight1);
 
 fill(colourFill);
-ellipse(CircleX, CircleY, CircleDiameter, CircleDiameter);
+ellipse(lefteyeX, lefteyeY, lefteyeDiameter, lefteyeDiameter);
 ellipse(circleA, circleB, Circlediameter, Circlediameter);
 fill(ColourFill);
-ellipse(CircleA, CircleB, circlediameter, circlediameter);
+ellipse(righteyeA, righteyeB, righteyediameter, righteyediameter);
 ellipse( circleC, circleD, CircleDiameterCD, CircleDiameterCD);
+//triangle(noseX1, noseY1, noseX2, noseY2, noseX3, noseY3);
+//line(mouthX1, mouthY1, mouthX2, mouthY2);
