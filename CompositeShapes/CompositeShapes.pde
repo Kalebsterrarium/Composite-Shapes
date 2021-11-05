@@ -13,7 +13,7 @@ float picX1, picY1, picWidth1, picHeight1, pic1ImageWidthRatio, pic1ImageHeightR
 //Geometery
 fullScreen();
 //
-pic1 = loadImage();
+pic1 = loadImage("1000_F_114714227_PXXImUhqY9QzsWGKSSscc6DnKjkPH7sX.jpg");
 //Population
 rectX = displayWidth*1/2 - displayHeight*1/2;
 rectY = displayHeight*0; 
@@ -36,18 +36,20 @@ circleD = displayHeight*1/3;
 CircleDiameterCD = displayHeight*1/8;
 colourFill= blue;
 ColourFill=black;
- pic1ImageHeightRatio=;
- pic1ImageWidthRatio=;
+ pic1ImageHeightRatio=880.0/1000.0;
+ pic1ImageWidthRatio=1000.0/1000.0;
  
- picX1 = rectX;
- picY1 = rectY; 
- picWidth1 =rectWidth*pic1ImageWidthRatio ; 
- picHeight1 =rectHeight*pic1ImageHeightRatio  ;
+ picX1 = displayWidth*1/3;
+ picY1 = displayHeight*5/8; 
+ picWidth1 =displayWidth*pic1ImageWidthRatio*1/3 ; 
+ picHeight1 =displayHeight*pic1ImageHeightRatio*1/3  ;
 //
 //Canvas
+
 rect(rectX, rectY, rectWidth, rectHeight);
-image(pic1, picX1, picY1, picWidth1, picHeight1);
 ellipse(circleX, circleY, circleDiameter, circleDiameter);
+image(pic1, picX1, picY1, picWidth1, picHeight1);
+
 fill(colourFill);
 ellipse(CircleX, CircleY, CircleDiameter, CircleDiameter);
 ellipse(circleA, circleB, Circlediameter, Circlediameter);
