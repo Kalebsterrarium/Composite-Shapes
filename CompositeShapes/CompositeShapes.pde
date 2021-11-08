@@ -46,11 +46,15 @@ ColourFill=black;
  picWidth1 =displayWidth*pic1ImageWidthRatio*1/3 ; 
  picHeight1 =displayHeight*pic1ImageHeightRatio*1/3  ;
  noseX1=faceX; 
- noseY1=displayHeight*3/8; 
- noseX2=lefteyeX; 
- noseY2=faceY; 
- noseX3=displayWidth*6/8; 
- noseY3=faceY;
+ noseY1=displayHeight*2/5; 
+ noseX2=displayWidth*7/16; 
+ noseY2=displayHeight*5/8; 
+ noseX3=displayWidth*9/16; 
+ noseY3= displayHeight*5/8;
+ //mouthX1=;
+ //mouthY1=;
+ //mouthX2=;
+ //mouthY2=;
 //
 //Canvas
 
