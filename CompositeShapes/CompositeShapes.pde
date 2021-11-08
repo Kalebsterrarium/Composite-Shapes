@@ -63,7 +63,6 @@ Colourfillred=red;
  spotDiameter=random(displayWidth*1/30, width*1/10);
  mouthThick=16;
  reset=1;
- Colourreset=#FFFFFF;
 //
 //Canvas
 
@@ -82,5 +81,12 @@ strokeWeight(mouthThick);
 line(mouthX1, mouthY1, mouthX2, mouthY2);
 strokeWeight(reset);
 fill(Colourfillred);
+ellipse(spotX, spotY, spotDiameter, spotDiameter);
+ellipse(spotX, spotY, spotDiameter, spotDiameter);
+ellipse(spotX, spotY, spotDiameter, spotDiameter);
+ellipse(spotX, spotY, spotDiameter, spotDiameter);
+ellipse(spotX, spotY, spotDiameter, spotDiameter);
+ellipse(spotX, spotY, spotDiameter, spotDiameter);
+ellipse(spotX, spotY, spotDiameter, spotDiameter);
 ellipse(spotX, spotY, spotDiameter, spotDiameter);
 fill(Colourreset);
