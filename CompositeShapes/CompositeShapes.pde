@@ -6,11 +6,12 @@ float lefteyeX, lefteyeY, lefteyeDiameter;
 float circleA, circleB, Circlediameter;
 float righteyeA, righteyeB, righteyediameter;
 float circleC, circleD, CircleDiameterCD;
-color blue=#333CD3, colourFill, black=#000000, ColourFill;
+color blue=#333CD3, colourFill, black=#000000, ColourFill, red=#FF0000, Colourfillred;
 PImage pic1;
 float picX1, picY1, picWidth1, picHeight1, pic1ImageWidthRatio, pic1ImageHeightRatio;
 float noseX1, noseY1, noseX2, noseY2, noseX3, noseY3;
 float mouthX1, mouthY1, mouthX2, mouthY2;
+float spotX, spotY, spotDiameter;
 //
 //Geometery
 fullScreen();
@@ -38,6 +39,7 @@ circleD = displayHeight*1/3;
 CircleDiameterCD = displayHeight*1/8;
 colourFill= blue;
 ColourFill=black;
+Colourfillred=red;
  pic1ImageHeightRatio=880.0/1000.0;
  pic1ImageWidthRatio=1000.0/1000.0;
  
@@ -55,11 +57,16 @@ ColourFill=black;
  //mouthY1=;
  //mouthX2=;
  //mouthY2=;
+ spotX=displayWidth*1/4;
+ spotY=displayHeight*5/6;
+ spotDiameter=displayHeight*1/4;
 //
 //Canvas
 
 rect(rectX, rectY, rectWidth, rectHeight);
 ellipse(faceX, faceY, faceDiameter, faceDiameter);
+fill(Colourfillred);
+ellipse(spotX, spotY, spotDiameter, spotDiameter);
 image(pic1, picX1, picY1, picWidth1, picHeight1);
 
 fill(colourFill);
