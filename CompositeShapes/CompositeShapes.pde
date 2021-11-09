@@ -1,5 +1,6 @@
 //Measles
 //
+//Global varibles
 float rectX, rectY, rectWidth, rectHeight;
 float faceX, faceY, faceDiameter;
 float lefteyeX, lefteyeY, lefteyeDiameter;
@@ -14,12 +15,10 @@ float mouthX1, mouthY1, mouthX2, mouthY2;
 float spotX, spotY, spotDiameter;
 float mouthThick, reset;
 //
-//Geometery
-fullScreen();
-//
-pic1 = loadImage("1000_F_114714227_PXXImUhqY9QzsWGKSSscc6DnKjkPH7sX.jpg");
-//Population
-rectX = displayWidth*1/2 - displayHeight*1/2;
+void setup () {
+  fullScreen();
+  //Population
+  rectX = displayWidth*1/2 - displayHeight*1/2;
 rectY = displayHeight*0; 
 rectWidth = displayHeight;
 rectHeight = displayHeight;
@@ -41,29 +40,47 @@ CircleDiameterCD = displayHeight*1/8;
 colourFill= blue;
 ColourFill=black;
 Colourfillred=red;
- pic1ImageHeightRatio=880.0/1000.0;
- pic1ImageWidthRatio=1000.0/1000.0;
- 
- picX1 = displayWidth*1/3;
- picY1 = displayHeight*5/8; 
- picWidth1 =displayWidth*pic1ImageWidthRatio*1/3 ; 
- picHeight1 =displayHeight*pic1ImageHeightRatio*1/3  ;
- noseX1=faceX; 
- noseY1=displayHeight*2/5; 
- noseX2=displayWidth*7/16; 
- noseY2=displayHeight*5/8; 
- noseX3=displayWidth*9/16; 
- noseY3= displayHeight*5/8;
- mouthX1=lefteyeX;
- mouthY1=displayHeight*3/4;
- mouthX2=righteyeA;
- mouthY2=mouthY1;
- spotX=random(displayWidth);
- spotY=random(displayHeight);
- spotDiameter=random(displayWidth*1/30, width*1/10);
- mouthThick=16;
- reset=1;
+pic1ImageHeightRatio=880.0/1000.0;
+pic1ImageWidthRatio=1000.0/1000.0;
+
+picX1 = displayWidth*1/3;
+picY1 = displayHeight*5/8; 
+picWidth1 =displayWidth*pic1ImageWidthRatio*1/3 ; 
+picHeight1 =displayHeight*pic1ImageHeightRatio*1/3  ;
+noseX1=faceX; 
+noseY1=displayHeight*2/5; 
+noseX2=displayWidth*7/16; 
+noseY2=displayHeight*5/8; 
+noseX3=displayWidth*9/16; 
+noseY3= displayHeight*5/8;
+mouthX1=lefteyeX;
+mouthY1=displayHeight*3/4;
+mouthX2=righteyeA;
+mouthY2=mouthY1;
+mouthThick=16;
+reset=1;
 //
+
+
+//
+} //End setup()
+//
+void draw () {}//End draw ()
+
+
+
+
+
+
+
+//Geometery
+fullScreen();
+//
+pic1 = loadImage("1000_F_114714227_PXXImUhqY9QzsWGKSSscc6DnKjkPH7sX.jpg");
+
+spotX=random(displayWidth);
+spotY=random(displayHeight);
+spotDiameter=random(displayWidth*1/30, width*1/10);
 //Canvas
 
 rect(rectX, rectY, rectWidth, rectHeight);
