@@ -60,12 +60,19 @@ void setup () {
   mouthThick=16;
   reset=1;
   //
-
+rect(rectX, rectY, rectWidth, rectHeight);
+  ellipse(faceX, faceY, faceDiameter, faceDiameter);
 
   //
 } //End setup()
 //
 void draw () {
+  println(mouseX,mouseY);
+   if (spotX >=rectX && spotY >= rectY && spotX <= rectX+rectWidth && spotY <= rectY+rectHeight) {
+     fill(Colourfillred);
+  ellipse(spotX, spotY, spotDiameter, spotDiameter);
+  fill(Colourreset);} else {}
+  
   //Population that changes 
   spotX=random(displayWidth);
   spotY=random(displayHeight);
@@ -79,14 +86,7 @@ void draw () {
    
  
   
-  fill(Colourfillred);
-  ellipse(spotX, spotY, spotDiameter, spotDiameter);
-  fill(Colourreset);
-  rect(rectX, rectY, rectWidth, rectHeight);
-  ellipse(faceX, faceY, faceDiameter, faceDiameter);
-  fill(Colourfillred);
-  ellipse(spotX, spotY, spotDiameter, spotDiameter);
-  fill(Colourreset);
+  
   
    fill(colourFill);
   ellipse(lefteyeX, lefteyeY, lefteyeDiameter, lefteyeDiameter);
