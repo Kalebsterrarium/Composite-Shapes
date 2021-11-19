@@ -14,10 +14,15 @@ float noseX1, noseY1, noseX2, noseY2, noseX3, noseY3;
 float mouthX1, mouthY1, mouthX2, mouthY2;
 float spotX, spotY, spotDiameter;
 float mouthThick, reset;
+float rect1X, rect1Y, rect1Width, rect1Height;
+float rect2X, rect2Y, rect2Width, rect2Height;
+float rect3X, rect3Y, rect3Width, rect3Height;
+float rect4X, rect4Y, rect4Width, rect4Height;
 //
 void setup () {
   fullScreen();
   //Population
+  pic1 = loadImage("../49-497493_free-png-download-beard-and-mouth-png-images.png");
   rectX = displayWidth*1/2 - displayHeight*1/2;
   rectY = displayHeight*0; 
   rectWidth = displayHeight;
@@ -40,10 +45,9 @@ void setup () {
   colourFill= blue;
   ColourFill=black;
   Colourfillred=red;
-  pic1ImageHeightRatio=880.0/1000.0;
-  pic1ImageWidthRatio=1000.0/1000.0;
-
-  picX1 = displayWidth*1/3;
+  pic1ImageHeightRatio=840.0/840.0;
+  pic1ImageWidthRatio=727.0/840.0;
+  picX1 = displayWidth*29/80;
   picY1 = displayHeight*5/8; 
   picWidth1 =displayWidth*pic1ImageWidthRatio*1/3 ; 
   picHeight1 =displayHeight*pic1ImageHeightRatio*1/3  ;
@@ -53,12 +57,13 @@ void setup () {
   noseY2=displayHeight*5/8; 
   noseX3=displayWidth*9/16; 
   noseY3= displayHeight*5/8;
-  mouthX1=lefteyeX;
-  mouthY1=displayHeight*3/4;
-  mouthX2=righteyeA;
-  mouthY2=mouthY1;
-  mouthThick=16;
-  reset=1;
+    
+  //mouthX1=lefteyeX;
+  //mouthY1=displayHeight*3/4;
+  //mouthX2=righteyeA;
+  //mouthY2=mouthY1;
+ // mouthThick=16;
+  //reset=1;
   //
 rect(rectX, rectY, rectWidth, rectHeight);
   ellipse(faceX, faceY, faceDiameter, faceDiameter);
@@ -80,7 +85,6 @@ void draw () {
   //
   //Canvas
   
-  //image(pic1, picX1, picY1, picWidth1, picHeight1);
   
   
    
@@ -97,9 +101,10 @@ void draw () {
   ellipse( circleC, circleD, CircleDiameterCD, CircleDiameterCD);
    fill(Colourreset);
      triangle(noseX1, noseY1, noseX2, noseY2, noseX3, noseY3);
-  strokeWeight(mouthThick);
-  line(mouthX1, mouthY1, mouthX2, mouthY2);
-  strokeWeight(reset);
+     image(pic1, picX1, picY1, picWidth1, picHeight1);
+  //strokeWeight(mouthThick);
+  //line(mouthX1, mouthY1, mouthX2, mouthY2);
+  //strokeWeight(reset);
   
   
   
